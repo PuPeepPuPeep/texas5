@@ -1,6 +1,12 @@
 <?php
 session_start()
 ?>
+<?php
+if (isset($_GET['logout'])){
+  session_destroy();
+  header('Location:index.php');
+}
+?>
 <nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
   <div class="w3-container w3-display-container w3-padding-16">
     <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
@@ -12,6 +18,8 @@ session_start()
   <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
     <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding" onclick="document.getElementById('login').style.display='block'">Login</a> <!-- login -->
     <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding" onclick="document.getElementById('newsletter').style.display='block'">Register</a> <!-- register -->
+    <!-- logout button -->
+    <a href="index.php?logout='1'" class="w3-bar-item w3-button w3-pading">Logout</a>
     <a href="#" class="w3-bar-item w3-button">Shirts</a>
     <a href="#" class="w3-bar-item w3-button">Dresses</a>
     <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
@@ -64,10 +72,13 @@ session_start()
       <i class="fa fa-shopping-cart w3-margin-right"></i>
       <i class="fa fa-search"></i>
 
-     <!-- <?php
-        echo $_SESSION['name'];
+      <!-- show Name -->
+      <?php
+        if (isset($_SESSION['name'])){
+          echo $_SESSION['name'];
+        }
       ?>
-      -->
+      
     </p>
   </header>
 
