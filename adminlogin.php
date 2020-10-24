@@ -12,5 +12,5 @@ if($numrow==0){
 }else{
     header("Location:index.php");
 }
-$_SESSION['name']=$row['A_ID'];
+$_SESSION['admin']=$row['A_ID'];
 ?>

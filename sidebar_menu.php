@@ -77,6 +77,10 @@ if (isset($_GET['logout'])){
         if (isset($_SESSION['name'])){
           echo $_SESSION['name'];
         }
+        if (isset($_SESSION['admin'])){
+         // echo "<button onclick="document.getElementById('newsletter').style.display='block'">Add Product</button>";
+          echo $_SESSION['admin'];
+        }
       ?>
       
     </p>
