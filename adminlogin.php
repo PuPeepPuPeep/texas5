@@ -1,0 +1,16 @@
+<?php
+session_start();
+
+include("connect.php");
+$sql = "SELECT * FROM admin WHERE A_ID='".$_POST['user']."'AND A_Password='".$_POST['pass']."'";
+
+$result=mysqli_query($conn,$sql);
+$numrow=mysqli_num_rows($result);
+$row=mysqli_fetch_assoc($result);
+if($numrow==0){
+    echo 'เข้าสู่ระบบไม่ได้';
+}else{
+    header("Location:index.php");
+}
+$_SESSION['name']=$row['A_ID'];
+?>
