@@ -78,7 +78,11 @@ if (isset($_GET['logout'])){
           echo $_SESSION['name'];
         }
         if (isset($_SESSION['admin'])){
-         // echo "<button onclick="document.getElementById('newsletter').style.display='block'">Add Product</button>";
+          echo '<i class="fa fa-coffee"';
+          ?>
+          onclick="document.getElementById('addproduct').style.display='block'"
+          <?php
+          echo '></i>';
           echo $_SESSION['admin'];
         }
       ?>
@@ -153,6 +157,27 @@ if (isset($_GET['logout'])){
         <p>PASSWORD</p>
         <p><input name="pass" class="w3-input w3-border" type="password" placeholder="Password"></p>
         <button type="button" class="btn btn-danger" onclick="document.getElementById('adminlogin').style.display='none'">ยกเลิก</button>
+        <button type="submit" class="btn btn-success">ตกลง</button>
+        <!--<i onclick="document.getElementById('newsletter').style.display='none'" class="fa fa-remove w3-right w3-button w3-transparent w3-xxlarge"></i>-->                     <!-- ตัวกากะบาท -->
+      </form>
+    </div>
+  </div>
+</div>
+<!--Add Product-->
+<div id="addproduct" class="w3-modal">
+  <div class="w3-modal-content w3-animate-zoom" style="padding:32px">
+    <div class="w3-container w3-white w3-center">
+      <form action="addproduct.php" method="post" enctype="multipart/form-data">
+        <h2 class="w3-wide">Add Product</h2>
+        <p>Name</p>
+        <p><input name="P_name" class="w3-input w3-border" type="text" placeholder="Product Name"></p>
+        <p>Price</p>
+        <p><input name="P_price" class="w3-input w3-border" type="text" placeholder="Product Price"></p>
+        <p>Image</p>
+        <p><input name="P_image" class="w3-input w3-border" type="file" placeholder="Product Image"></p>
+        <p>Type</p>
+        <p><input name="T_ID" class="w3-input w3-border" type="text" placeholder="Product Type"></p>
+        <button type="button" class="btn btn-danger" onclick="document.getElementById('addproduct').style.display='none'">ยกเลิก</button>
         <button type="submit" class="btn btn-success">ตกลง</button>
         <!--<i onclick="document.getElementById('newsletter').style.display='none'" class="fa fa-remove w3-right w3-button w3-transparent w3-xxlarge"></i>-->                     <!-- ตัวกากะบาท -->
       </form>
