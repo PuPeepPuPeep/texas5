@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 12, 2020 at 10:09 AM
+-- Generation Time: Oct 27, 2020 at 01:37 PM
 -- Server version: 10.4.13-MariaDB
 -- PHP Version: 7.4.8
 
@@ -31,6 +31,13 @@ CREATE TABLE `admin` (
   `A_ID` varchar(11) NOT NULL,
   `A_Password` varchar(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`A_ID`, `A_Password`) VALUES
+('admin', '1234');
 
 -- --------------------------------------------------------
 
@@ -77,20 +84,31 @@ CREATE TABLE `member` (
 --
 
 INSERT INTO `member` (`M_ID`, `M_Username`, `M_Password`, `M_Name`, `M_Address`) VALUES
-(1, 'user', '1111', 'user', '1234');
+(1, 'user', '1111', 'user', '1234'),
+(2, '', '', '<br /><b>Notice</b>:  Undefined index: P_ID in <b>C:xampphtdocs	exas5edit.php</b> on line <b>14</b><', ''),
+(3, 'user5', '5555', 'user5', 'abcd');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `order`
+-- Table structure for table `orders`
 --
 
-CREATE TABLE `order` (
+CREATE TABLE `orders` (
   `O_ID` int(11) NOT NULL,
-  `O_Name` int(11) NOT NULL,
   `P_ID` int(11) NOT NULL,
   `M_ID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `orders`
+--
+
+INSERT INTO `orders` (`O_ID`, `P_ID`, `M_ID`) VALUES
+(1, 3, 3),
+(2, 2, 3),
+(3, 3, 3),
+(4, 2, 3);
 
 -- --------------------------------------------------------
 
@@ -124,7 +142,21 @@ CREATE TABLE `product` (
 --
 
 INSERT INTO `product` (`P_ID`, `P_name`, `P_price`, `P_img`, `A_ID`, `T_ID`) VALUES
-(1, 'Ram 512 GB', 450, 'no.jpg', 'admin', 'r1');
+(2, 'PNOOY', 555, 'PNOOY.jpg', 'admin', 'r1'),
+(3, 'PBEWWWW', 5678, 'PBEw.jpg', 'admin', 'r11'),
+(4, 'Test', 1234, '', '', 'ram'),
+(5, 'asd', 333, '', '', 'ram'),
+(6, 'Noooo', 123444, 'C:xampp	mpphp878.tmp', '', 'ram'),
+(7, 'gkffgkgfl', 34535, 'C:xampp	mpphp4987.tmp', '', 'ram'),
+(8, 'testttttt', 5555, '', '', 'ram'),
+(9, 'AHHHHHHHH', 6666, 'Array', '', 'ram'),
+(10, 'HELPPPPP', 6666, '', '', 'ram'),
+(11, 'HELP ME PLZ', 1111, 'PSUN.jpg', '', 'ram'),
+(12, 'Shit here we go again', 333, 'O.jpg', '', 'ram'),
+(13, 'Ewwwwwww', 8888, 'PSUN2.jpg', '', 'ram'),
+(14, 'O No', 1234, 'O.jpg', '', 'ram'),
+(15, 'OOO', 999, 'O.jpg', '', 'ram'),
+(16, 'One More Time', 9090, 'PSUN.jpg', 'admin', 'ram');
 
 -- --------------------------------------------------------
 
@@ -166,9 +198,9 @@ ALTER TABLE `member`
   ADD PRIMARY KEY (`M_ID`);
 
 --
--- Indexes for table `order`
+-- Indexes for table `orders`
 --
-ALTER TABLE `order`
+ALTER TABLE `orders`
   ADD PRIMARY KEY (`O_ID`);
 
 --
@@ -209,13 +241,13 @@ ALTER TABLE `history`
 -- AUTO_INCREMENT for table `member`
 --
 ALTER TABLE `member`
-  MODIFY `M_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `M_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `order`
+-- AUTO_INCREMENT for table `orders`
 --
-ALTER TABLE `order`
-  MODIFY `O_ID` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `orders`
+  MODIFY `O_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `payment`
@@ -227,7 +259,7 @@ ALTER TABLE `payment`
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `P_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `P_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
