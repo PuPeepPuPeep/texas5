@@ -69,7 +69,7 @@ if (isset($_GET['logout'])){
   <header class="w3-container w3-xlarge">
     <p class="w3-left">test</p>
     <p class="w3-right">
-      <i class="fa fa-shopping-cart w3-margin-right"></i>
+      <a href="cart.php" class="fa fa-shopping-cart w3-margin-right"></a>
       <i class="fa fa-search"></i>
 
       <!-- show Name -->

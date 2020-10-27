@@ -19,7 +19,7 @@
           <img src="img/'.$row["P_img"].'" style="width:100%">
           <span class="w3-tag w3-display-topleft">New</span>
           <div class="w3-display-middle w3-display-hover">
-            <button class="w3-button w3-red">Buy now <i class="fa fa-shopping-cart"></i></button>
+            <a href="buy.php?P_ID='.$row["P_ID"].'" class="w3-button w3-red">Buy now <i class="fa fa-shopping-cart"></i></a>
           </div>';
           if(isset($_SESSION['admin'])){
             ?>

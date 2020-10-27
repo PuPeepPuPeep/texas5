@@ -13,4 +13,5 @@ if($numrow==0){
     header("Location:index.php");
 }
 $_SESSION['name']=$row['M_Name'];
+$_SESSION['M_ID']=$row['M_ID'];
 ?>
