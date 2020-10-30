@@ -1,5 +1,5 @@
 <?php
-session_start()
+  session_start()
 ?>
 <?php
 if (isset($_GET['logout'])){
@@ -14,27 +14,31 @@ if (isset($_GET['logout'])){
   </div>
 
 
-
   <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
-    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding" onclick="document.getElementById('login').style.display='block'">Login</a> <!-- login -->
+    <?php 
+      if(empty($_SESSION['name']) && empty($_SESSION['M_ID'])) {
+        
+    ?>
+      <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding" onclick="document.getElementById('login').style.display='block'">Login</a> <!-- login -->
     <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding" onclick="document.getElementById('newsletter').style.display='block'">Register</a> <!-- register -->
-    <!-- logout button -->
+    <?php 
+      } else {
+
+    ?>
+
     <a href="index.php?logout='1'" class="w3-bar-item w3-button w3-pading">Logout</a>
+
+    <!-- logout button -->
+    <?php
+
+    }
+    ?>
     <a href="#" class="w3-bar-item w3-button">Shirts</a>
-    <a href="#" class="w3-bar-item w3-button">Dresses</a>
-    <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
-      Jeans <i class="fa fa-caret-down"></i>
-    </a>
-    <div id="demoAcc" class="w3-bar-block w3-hide w3-padding-large w3-medium">
-      <a href="#" class="w3-bar-item w3-button w3-light-grey"><i class="fa fa-caret-right w3-margin-right"></i>Skinny</a>
-      <a href="#" class="w3-bar-item w3-button">Relaxed</a>
-      <a href="#" class="w3-bar-item w3-button">Bootcut</a>
-      <a href="#" class="w3-bar-item w3-button">Straight</a>
-    </div>
-    <a href="#" class="w3-bar-item w3-button">Jackets</a>
-    <a href="#" class="w3-bar-item w3-button">Gymwear</a>
-    <a href="#" class="w3-bar-item w3-button">Blazers</a>
-    <a href="#" class="w3-bar-item w3-button">Shoes</a>
+    <a href="#" class="w3-bar-item w3-button">CPU</a>
+    <a href="#" class="w3-bar-item w3-button">Mainboard</a>
+    <a href="#" class="w3-bar-item w3-button">RAM</a>
+    <a href="#" class="w3-bar-item w3-button">HardDisk / SSD</a>
+    <a href="#" class="w3-bar-item w3-button">Power Supply</a>
   </div>
   <a href="#footer" class="w3-bar-item w3-button w3-padding">Contact</a> 
   <a href="#footer"  class="w3-bar-item w3-button w3-padding">Subscribe</a>
