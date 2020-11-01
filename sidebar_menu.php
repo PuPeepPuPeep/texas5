@@ -98,9 +98,9 @@ if (isset($_GET['logout'])){
       
 
       <div class="w3-dropdown-hover" style="float: right; margin-bottom: 5px;">
-        <button class="w3-button w3-black"><i class="fa fa-coffee" onclick="document.getElementById('addproduct').style.display='block'"><?= $_SESSION['admin']; ?></i></button>
+        <button class="w3-button w3-black"><i class="fa fa-coffee"><?= $_SESSION['admin']; ?></i></button>
           <div class="w3-dropdown-content w3-bar-block w3-border">
-          <a href="#" class="w3-bar-item w3-button" style="font-size: 16px;">Add Product</a>
+          <a href="#" class="w3-bar-item w3-button" onclick="document.getElementById('addproduct').style.display='block'" style="font-size: 16px;">Add Product</a>
           <a href="#" class="w3-bar-item w3-button" style="font-size: 16px;">Report</a>
         </div>
       </div>
