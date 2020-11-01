@@ -23,7 +23,8 @@
             <?php 
               if(empty($_SESSION['name']) && empty($_SESSION['id'])) {
                 ?>
-                <a href="" onClick="alert('กรุณาเข้าสู่ระบบ')" class="w3-button w3-red">Buy now <i class="fa fa-shopping-cart"></a>
+                <a href="" onClick="alert('กรุณาเข้าสู่ระบบ')" class="w3-button w3-red">Buy now <i class="fa fa-shopping-cart"></i></a>
+    
                 <?php
               } else {
                 echo '<a href="buy.php?P_ID='.$row["P_ID"].'" class="w3-button w3-red">Buy now <i class="fa fa-shopping-cart"></i></a>';
