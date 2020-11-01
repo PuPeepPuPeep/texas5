@@ -16,20 +16,19 @@ if (isset($_GET['logout'])){
 
   <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
     <?php 
-      if(empty($_SESSION['name']) && empty($_SESSION['M_ID'])) {
+      if(!empty($_SESSION['name']) || !empty($_SESSION['M_ID']) || !empty($_SESSION['admin'])) {
         
     ?>
-      <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding" onclick="document.getElementById('login').style.display='block'">Login</a> <!-- login -->
-    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding" onclick="document.getElementById('newsletter').style.display='block'">Register</a> <!-- register -->
+    
+    <a href="index.php?logout='1'" class="w3-bar-item w3-button w3-pading">Logout</a>
+    
     <?php 
       } else {
-
     ?>
-
-    <a href="index.php?logout='1'" class="w3-bar-item w3-button w3-pading">Logout</a>
-
-    <!-- logout button -->
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding" onclick="document.getElementById('login').style.display='block'">Login</a> <!-- login -->
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding" onclick="document.getElementById('newsletter').style.display='block'">Register</a> <!-- register -->
     <?php
+
 
     }
     ?>
