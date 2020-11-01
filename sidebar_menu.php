@@ -40,7 +40,6 @@ if (isset($_GET['logout'])){
     <a href="#" class="w3-bar-item w3-button">Power Supply</a>
   </div>
   <a href="#footer" class="w3-bar-item w3-button w3-padding">Contact</a> 
-  <a href="#footer"  class="w3-bar-item w3-button w3-padding">Subscribe</a>
 </nav>
 
 
