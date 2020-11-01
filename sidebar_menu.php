@@ -85,15 +85,32 @@ if (isset($_GET['logout'])){
         if (isset($_SESSION['name'])){
           echo $_SESSION['name'];
         }
-        if (isset($_SESSION['admin'])){
-          echo '<i class="fa fa-coffee"';
-          ?>
-          onclick="document.getElementById('addproduct').style.display='block'"
-          <?php
-          echo '></i>';
-          echo $_SESSION['admin'];
-        }
+        // if (isset($_SESSION['admin'])){
+        //   echo '<i class="fa fa-coffee"';
+        //   ?>
+           <?php
+        //   echo '></i>';
+        //   echo $_SESSION['admin'];
+        // }
+        if(isset($_SESSION['admin'])) {
+
       ?>
+      
+
+      <div class="w3-dropdown-hover" style="float: right; margin-bottom: 5px;">
+        <button class="w3-button w3-black"><i class="fa fa-coffee" onclick="document.getElementById('addproduct').style.display='block'"><?= $_SESSION['admin']; ?></i></button>
+          <div class="w3-dropdown-content w3-bar-block w3-border">
+          <a href="#" class="w3-bar-item w3-button" style="font-size: 16px;">Add Product</a>
+          <a href="#" class="w3-bar-item w3-button" style="font-size: 16px;">Report</a>
+        </div>
+      </div>
+
+      <?php  
+      
+        }
+      
+      ?>
+
       
     </p>
   </header>
