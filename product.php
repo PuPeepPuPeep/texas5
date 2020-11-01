@@ -16,7 +16,7 @@
       <div class="w3-col l3 s6">
         <div class="w3-container">
         <div class="w3-display-container">
-          <img src="img/<?= $row["P_img"]; ?>" style="width:100%">
+          <img src="img/<?= $row["P_img"]; ?>" width="380" height="300">
           <span class="w3-tag w3-display-topleft">New</span>
           <div class="w3-display-middle w3-display-hover">
           
