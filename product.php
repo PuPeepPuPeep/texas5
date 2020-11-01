@@ -8,8 +8,6 @@
   <div class="w3-row">
   <?php
     include("connect.php");
-    // เพิ่ม session_start();
-    session_start();
     $sql = "SELECT * FROM product";
     $result = mysqli_query($conn, $sql);
 
