@@ -72,8 +72,15 @@ if (isset($_GET['logout'])){
   <header class="w3-container w3-xlarge">
     <p class="w3-left">test</p>
     <p class="w3-right">
-      <a href="cart.php" class="fa fa-shopping-cart w3-margin-right"></a>
 
+
+      <?php if(!empty($_SESSION['name']) || !empty($_SESSION['M_ID']) || !empty($_SESSION['admin'])) { ?>
+
+      <a href="cart.php" class="fa fa-shopping-cart w3-margin-right"></a>
+      <?php 
+      } 
+        
+       ?>
       <!-- show Name -->
       <?php
         if (isset($_SESSION['name'])){
