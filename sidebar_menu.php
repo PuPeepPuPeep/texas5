@@ -73,7 +73,6 @@ if (isset($_GET['logout'])){
     <p class="w3-left">test</p>
     <p class="w3-right">
       <a href="cart.php" class="fa fa-shopping-cart w3-margin-right"></a>
-      <a href="payment.php" class="fa fa-money"></a>
 
       <!-- show Name -->
       <?php

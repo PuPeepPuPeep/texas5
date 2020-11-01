@@ -2,7 +2,7 @@
 session_start();
 include("connect.php");
 
-$sql = "SELECT * FROM orders WHERE M_ID='".$_SESSION['M_ID']."'";
+$sql = "SELECT * FROM orders WHERE M_ID='".$_SESSION['M_ID']."' AND O_status=0";
 $result = mysqli_query($conn, $sql);
 $sum = 0;
 while($row = mysqli_fetch_assoc($result)){
@@ -14,6 +14,6 @@ while($row = mysqli_fetch_assoc($result)){
     echo '<img src="'.$row2['P_img'].'"><br>';
     $sum = $sum + $row2['P_price'];
 }
-echo $sum;
+echo 'ราคารวม '.$sum.'<br>';
 ?>
 <a href="payment.php?sum=<?php echo $sum ?>">ภาษีกู</a>
