@@ -32,7 +32,6 @@ if (isset($_GET['logout'])){
 
     }
     ?>
-    <a href="#" class="w3-bar-item w3-button">Shirts</a>
     <a href="#" class="w3-bar-item w3-button">CPU</a>
     <a href="#" class="w3-bar-item w3-button">Mainboard</a>
     <a href="#" class="w3-bar-item w3-button">RAM</a>
