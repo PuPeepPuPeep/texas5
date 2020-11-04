@@ -32,11 +32,11 @@ if (isset($_GET['logout'])){
 
     }
     ?>
-    <a href="#" class="w3-bar-item w3-button">CPU</a>
-    <a href="#" class="w3-bar-item w3-button">Mainboard</a>
-    <a href="#" class="w3-bar-item w3-button">RAM</a>
-    <a href="#" class="w3-bar-item w3-button">HardDisk / SSD</a>
-    <a href="#" class="w3-bar-item w3-button">Power Supply</a>
+    <a href="?T=1#product" class="w3-bar-item w3-button">CPU</a>
+    <a href="?T=2#product" class="w3-bar-item w3-button">Mainboard</a>
+    <a href="?T=3#product" class="w3-bar-item w3-button">RAM</a>
+    <a href="?T=4#product" class="w3-bar-item w3-button">HardDisk / SSD</a>
+    <a href="?T=5#product" class="w3-bar-item w3-button">Power Supply</a>
   </div>
   <a href="#footer" class="w3-bar-item w3-button w3-padding">Contact</a> 
 </nav>
@@ -138,13 +138,13 @@ if (isset($_GET['logout'])){
       <form action="register.php" method="post">
         <h2 class="w3-wide">REGISTER</h2>
         <p>USERNAME</p>
-        <p><input name="user" class="w3-input w3-border" type="text" placeholder="Username"></p>
+        <p><input name="user" class="w3-input w3-border" type="text" placeholder="Username" required></p>
         <p>PASSWORD</p>
-        <p><input name="pass" class="w3-input w3-border" type="password" placeholder="Password"></p>
+        <p><input name="pass" class="w3-input w3-border" type="password" placeholder="Password" required></p>
         <p>NAME</p>
-        <p><input name="name" class="w3-input w3-border" type="text" placeholder="Name"></p>
+        <p><input name="name" class="w3-input w3-border" type="text" placeholder="Name" required></p>
         <p>ADDRESS</p>
-        <p><textarea name="address" rows="4" cols="50" class="w3-input w3-border" placeholder="Address" ></textarea></p>
+        <p><textarea name="address" rows="4" cols="50" class="w3-input w3-border" placeholder="Address" required></textarea></p>
         <button type="button" class="btn btn-danger" onclick="document.getElementById('newsletter').style.display='none'">ยกเลิก</button>
         <button type="submit" class="btn btn-success">ตกลง</button>
         <!--<i onclick="document.getElementById('newsletter').style.display='none'" class="fa fa-remove w3-right w3-button w3-transparent w3-xxlarge"></i>-->                     <!-- ตัวกากะบาท -->
@@ -159,9 +159,9 @@ if (isset($_GET['logout'])){
       <form action="login.php" method="post">
         <h2 class="w3-wide">LOGIN</h2>
         <p>USERNAME</p>
-        <p><input name="user" class="w3-input w3-border" type="text" placeholder="Username"></p>
+        <p><input name="user" class="w3-input w3-border" type="text" placeholder="Username" required></p>
         <p>PASSWORD</p>
-        <p><input name="pass" class="w3-input w3-border" type="password" placeholder="Password"></p>
+        <p><input name="pass" class="w3-input w3-border" type="password" placeholder="Password" required></p>
         <button type="button" class="btn btn-danger" onclick="document.getElementById('login').style.display='none'">ยกเลิก</button>
         <button type="submit" class="btn btn-success">ตกลง</button>
         <button type="button" class="btn btn-info" onclick="document.getElementById('adminlogin').style.display='block'">สำหรับ Admin</button>
@@ -177,9 +177,9 @@ if (isset($_GET['logout'])){
       <form action="adminlogin.php" method="post">
         <h2 class="w3-wide">ADMIN LOGIN</h2>
         <p>USERNAME</p>
-        <p><input name="user" class="w3-input w3-border" type="text" placeholder="Username"></p>
+        <p><input name="user" class="w3-input w3-border" type="text" placeholder="Username" required></p>
         <p>PASSWORD</p>
-        <p><input name="pass" class="w3-input w3-border" type="password" placeholder="Password"></p>
+        <p><input name="pass" class="w3-input w3-border" type="password" placeholder="Password" required></p>
         <button type="button" class="btn btn-danger" onclick="document.getElementById('adminlogin').style.display='none'">ยกเลิก</button>
         <button type="submit" class="btn btn-success">ตกลง</button>
         <!--<i onclick="document.getElementById('newsletter').style.display='none'" class="fa fa-remove w3-right w3-button w3-transparent w3-xxlarge"></i>-->                     <!-- ตัวกากะบาท -->
@@ -194,13 +194,20 @@ if (isset($_GET['logout'])){
       <form action="addproduct.php" method="post" enctype="multipart/form-data">
         <h2 class="w3-wide">Add Product</h2>
         <p>Name</p>
-        <p><input name="P_name" class="w3-input w3-border" type="text" placeholder="Product Name"></p>
+        <p><input name="P_name" class="w3-input w3-border" type="text" placeholder="Product Name" required></p>
         <p>Price</p>
-        <p><input name="P_price" class="w3-input w3-border" type="text" placeholder="Product Price"></p>
+        <p><input name="P_price" class="w3-input w3-border" type="text" placeholder="Product Price" required></p>
         <p>Image</p>
-        <p><input name="P_image" class="w3-input w3-border" type="file" placeholder="Product Image"></p>
+        <p><input name="P_image" class="w3-input w3-border" type="file" placeholder="Product Image" required></p>
         <p>Type</p>
-        <p><input name="T_ID" class="w3-input w3-border" type="text" placeholder="Product Type"></p>
+        <p><select name="T_ID" class="w3-select w3-border">
+          <option value="" disabled selected>Product Type</option>
+          <option value="1">CPU</option>
+          <option value="2">Mainboard</option>
+          <option value="3">RAM</option>
+          <option value="4">HardDisk / SSD</option>
+          <option value="5">Power Supply</option>
+        </select></p>
         <button type="button" class="btn btn-danger" onclick="document.getElementById('addproduct').style.display='none'">ยกเลิก</button>
         <button type="submit" class="btn btn-success">ตกลง</button>
         <!--<i onclick="document.getElementById('newsletter').style.display='none'" class="fa fa-remove w3-right w3-button w3-transparent w3-xxlarge"></i>-->                     <!-- ตัวกากะบาท -->

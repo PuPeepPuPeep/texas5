@@ -5,12 +5,14 @@
 
   <!-- Product grid มันเรียงเป็นแนวตั้ง-->
   <h1>1</h1>
-  <div class="w3-row">
+  <div class="w3-row" id="product">
   <?php
     include("connect.php");
     $sql = "SELECT * FROM product";
+    if (isset($_GET['T'])){
+      $sql = "SELECT * FROM product WHERE T_ID='".$_GET['T']."'";
+    }
     $result = mysqli_query($conn, $sql);
-
     while($row = mysqli_fetch_assoc($result)){
       ?>
       <div class="w3-col l3 s6">
