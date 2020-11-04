@@ -9,16 +9,13 @@
     <div class="w3-row-padding">
       <div class="w3-col s4">
         <h4>Contact</h4>
-        <p>Questions? Go ahead.</p>
-        <form action="/action_page.php" target="_blank">
-          <p><input class="w3-input w3-border" type="text" placeholder="Name" name="Name" required></p>
-          <p><input class="w3-input w3-border" type="text" placeholder="Email" name="Email" required></p>
-          <p><input class="w3-input w3-border" type="text" placeholder="Subject" name="Subject" required></p>
-          <p><input class="w3-input w3-border" type="text" placeholder="Message" name="Message" required></p>
+        <p>Feed(me)back? Go ahead.</p>
+        <form action="feedback.php" method="POST">
+          <p><textarea style="resize: none" class="w3-input w3-border" placeholder="Message here" name="message" cols="30" rows="10" required></textarea></p>
+          
           <button type="submit" class="w3-button w3-block w3-dark-gray">Send</button>
         </form>
       </div>
-
       <div class="w3-col s4">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3854.089665686096!2d102.11553831484484!3d14.987726989556792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31194b80019e1771%3A0xc6979e02d8d878c7!2z4Lih4Lir4Liy4Lin4Li04LiX4Lii4Liy4Lil4Lix4Lii4LmA4LiX4LiE4LmC4LiZ4LmC4Lil4Lii4Li14Lij4Liy4LiK4Lih4LiH4LiE4Lil4Lit4Li14Liq4Liy4LiZ!5e0!3m2!1sth!2sth!4v1604242070500!5m2!1sth!2sth" width="700" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
       </div>
