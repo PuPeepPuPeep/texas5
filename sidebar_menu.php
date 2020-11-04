@@ -100,7 +100,7 @@ if (isset($_GET['logout'])){
         <button class="w3-button w3-black"><i class="fa fa-coffee"><?= $_SESSION['admin']; ?></i></button>
           <div class="w3-dropdown-content w3-bar-block w3-border">
           <a href="#" class="w3-bar-item w3-button" onclick="document.getElementById('addproduct').style.display='block'" style="font-size: 16px;">Add Product</a>
-          <a href="#" class="w3-bar-item w3-button" style="font-size: 16px;">Report</a>
+          <a href="#" class="w3-bar-item w3-button" onclick="document.getElementById('report').style.display='block'" style="font-size: 16px;">Report</a>
         </div>
       </div>
 
@@ -202,6 +202,23 @@ if (isset($_GET['logout'])){
         <p>Type</p>
         <p><input name="T_ID" class="w3-input w3-border" type="text" placeholder="Product Type"></p>
         <button type="button" class="btn btn-danger" onclick="document.getElementById('addproduct').style.display='none'">ยกเลิก</button>
+        <button type="submit" class="btn btn-success">ตกลง</button>
+        <!--<i onclick="document.getElementById('newsletter').style.display='none'" class="fa fa-remove w3-right w3-button w3-transparent w3-xxlarge"></i>-->                     <!-- ตัวกากะบาท -->
+      </form>
+    </div>
+  </div>
+</div>
+<!--Report-->
+<div id="report" class="w3-modal">
+  <div class="w3-modal-content w3-animate-zoom" style="padding:32px">
+    <div class="w3-container w3-white w3-center">
+      <form action="addproduct.php" method="post" enctype="multipart/form-data">
+        <h2 class="w3-wide">Report</h2>
+        <a href="" class="w3-button w3-border">History</a>
+        <br>
+        <a href="" class="w3-button w3-border">Feedback</a>
+        <br>
+        <button type="button" class="btn btn-danger" onclick="document.getElementById('report').style.display='none'">ยกเลิก</button>
         <button type="submit" class="btn btn-success">ตกลง</button>
         <!--<i onclick="document.getElementById('newsletter').style.display='none'" class="fa fa-remove w3-right w3-button w3-transparent w3-xxlarge"></i>-->                     <!-- ตัวกากะบาท -->
       </form>
