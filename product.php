@@ -47,9 +47,9 @@
     //       </div>';
           if(isset($_SESSION['admin'])){
             ?>
-            <div class="w3-display-bottom w3-display-hover">
+            <div class="w3-display-bottommiddle w3-display-hover">
             
-            <a href="edit.php?P_ID=<?php echo $row["P_ID"];?>" type="button" class="w3-button w3-yellow">Edit<i class="fa fa-shopping-cart"></i></a>
+            <a href="edit.php?P_ID=<?php echo $row["P_ID"];?>" type="button" class="w3-button w3-yellow">Edit <i class="fa fa-wrench"></i></a>
             
             </div>
             <?php
