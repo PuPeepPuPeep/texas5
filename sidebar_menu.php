@@ -219,14 +219,13 @@ if (isset($_GET['logout'])){
 <div id="report" class="w3-modal">
   <div class="w3-modal-content w3-animate-zoom" style="padding:32px">
     <div class="w3-container w3-white w3-center">
-      <form action="addproduct.php" method="post" enctype="multipart/form-data">
+      <form action="#" method="post" enctype="multipart/form-data">
         <h2 class="w3-wide">Report</h2>
         <a href="reporthistory.php" class="w3-button w3-border">History</a>
         <br>
         <a href="reportfeedback.php" class="w3-button w3-border">Feedback</a>
         <br>
         <button type="button" class="btn btn-danger" onclick="document.getElementById('report').style.display='none'">ยกเลิก</button>
-        <button type="submit" class="btn btn-success">ตกลง</button>
         <!--<i onclick="document.getElementById('newsletter').style.display='none'" class="fa fa-remove w3-right w3-button w3-transparent w3-xxlarge"></i>-->                     <!-- ตัวกากะบาท -->
       </form>
     </div>

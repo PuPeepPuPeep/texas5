@@ -1,9 +1,6 @@
 <?php
 include("connect.php");
 
-$sql = "SELECT * FROM feedback";
-$result = mysqli_query($conn, $sql);
-
 require_once("vendor/autoload.php");
 $defaultConfig = (new Mpdf\Config\ConfigVariables())->getDefaults();
 $fontDirs = $defaultConfig['fontDir'];
@@ -28,11 +25,14 @@ $mpdf = new \Mpdf\Mpdf([
         'default_font' => 'frutiger'
     ]);
 
+$sql = "SELECT * FROM feedback AS f, member AS m WHERE f.M_ID = m.M_ID";
+$result = mysqli_query($conn, $sql);
+    
 while($row=mysqli_fetch_assoc($result)){
-    $content .= $row["F_ID"];
-    $content .= $row["F_Date"];
-    $content .= $row["F_Text"];
-    $content .= $row["M_ID"]."<br>";
+    $content .= "F_ID = ".$row["F_ID"];
+    $content .= "F_Date = ".$row["F_Date"];
+    $content .= "F_Text = ".$row["F_Text"];
+    $content .= "M_Name = ".$row["M_Name"]."<br>";
 }
 
 $mpdf->WriteHTML($content);

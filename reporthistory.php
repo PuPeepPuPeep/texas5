@@ -1,9 +1,6 @@
 <?php
 include("connect.php");
 
-$sql = "SELECT * FROM history";
-$result = mysqli_query($conn, $sql);
-
 require_once("vendor/autoload.php");
 $defaultConfig = (new Mpdf\Config\ConfigVariables())->getDefaults();
 $fontDirs = $defaultConfig['fontDir'];
@@ -28,11 +25,14 @@ $mpdf = new \Mpdf\Mpdf([
         'default_font' => 'frutiger'
     ]);
 
+$sql = "SELECT h.H_ID, h.H_Date, h.O_ID, m.M_Name FROM history AS h, member AS m WHERE h.M_ID = m.M_ID";
+$result = mysqli_query($conn, $sql);
+
 while($row=mysqli_fetch_assoc($result)){
-    $content .= $row["H_ID"];
-    $content .= $row["H_Date"];
-    $content .= $row["M_ID"];
-    $content .= $row["O_ID"]."<br>";
+    $content .= "H_ID = ".$row["H_ID"];
+    $content .= "H_Date = ".$row["H_Date"];
+    $content .= "M_Name = ".$row["M_Name"];
+    $content .= "O_ID = ".$row["O_ID"]."<br>";
 }
 
 $mpdf->WriteHTML($content);
