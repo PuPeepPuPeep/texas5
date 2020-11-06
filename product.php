@@ -58,7 +58,7 @@
             <?php
           }
         echo '</div>
-          <p>'.$row["P_name"].'<br><b>'.$row["P_price"].'</b></p>
+          <p>'.mb_strimwidth($row["P_name"], 0, 50, "...").'<br><b>'.$row["P_price"].'</b></p>
         </div>
       </div>';
     }
