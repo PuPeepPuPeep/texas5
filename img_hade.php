@@ -45,6 +45,11 @@
     </a>
   </div>
 </div>
-
+  <!-- ช่องค้นหา -->
+  <div class="w3-container">
+  <h1>ค้นหารายการสินค้า</h1>
+  
+    <input class="w3-input w3-border w3-round" type="text" id="search" placeholder="ช่องค้นหารายการสินค้า"> 
+  </div>
 </body>
 </html>

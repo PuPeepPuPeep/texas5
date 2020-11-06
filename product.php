@@ -1,11 +1,6 @@
 <div class="w3-container w3-text-grey" id="jeans">
-    <p>8 items</p>
-  <!-- ช่องค้นหา -->
-  <h1>ค้นหารายการสินค้า</h1>
-  <form method="GET">
-    <input class="w3-input w3-border w3-round" type="text" name="search" placeholder="ช่องค้นหารายการสินค้า"> 
-    <p><button class="w3-button w3-block w3-black" style="margin-top: 5px;">ค้นหา</button></p>
-  </form>
+    <p>8 items</p> <!-- มันคืออะไรครับ By Sun -->
+  
   </div>
 
   <!-- Product grid มันเรียงเป็นแนวตั้ง-->
@@ -16,6 +11,9 @@
     $sql = "SELECT * FROM product";
     if (isset($_GET['T'])){
       $sql = "SELECT * FROM product WHERE T_ID='".$_GET['T']."'";
+    }elseif (isset($_POST['search'])){
+      $sql = "SELECT * FROM product WHERE P_Name LIKE '%" . $_POST['search'] . "%'";
+      session_start();
     }
     $result = mysqli_query($conn, $sql);
     while($row = mysqli_fetch_assoc($result)){

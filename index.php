@@ -8,6 +8,17 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+<script src="jquery-3.5.1.min.js"></script>
+<script>
+  $(document).ready(function(){
+    $("#search").keyup(function(){
+      $("#product").load("product.php",
+      {
+        search: $("#search").val()
+      });
+    });
+  });
+</script>
 
 <style>
 .w3-sidebar a {font-family: "Roboto", sans-serif}
