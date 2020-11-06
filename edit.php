@@ -22,13 +22,13 @@ $row = mysqli_fetch_assoc($result);
       <form action="saveedit.php?P_ID=<?php echo $P_ID; ?>" method="post">
         <h2 class="w3-wide">Edit</h2>
         <p>Name</p>
-        <p><input name="name" class="w3-input w3-border" type="text" value="<?php echo $row["P_name"];?>"></p>
+        <p><input name="name" class="w3-input w3-border" type="text" value="<?php echo $row["P_name"];?>" required></p>
         <p>Price</p>
-        <p><input name="price" class="w3-input w3-border" type="text" value="<?php echo $row["P_price"];?>"></p>
+        <p><input name="price" class="w3-input w3-border" type="text" value="<?php echo $row["P_price"];?>" required></p>
         <p>Image</p>
         <p><input name="image" class="w3-input w3-border" type="file" value="<?php echo $row["P_img"];?>"></p>
         <p>Type</p>
-        <p><input name="type" class="w3-input w3-border" type="text" value="<?php echo $row["T_ID"];?>"></p>
+        <p><input name="type" class="w3-input w3-border" type="text" value="<?php echo $row["T_ID"];?>" required></p>
         <button type="button" class="btn btn-danger" onclick="window.history.back();">ยกเลิก</button>
         <button type="submit" class="btn btn-success">ตกลง</button>
         <!--<i onclick="document.getElementById('newsletter').style.display='none'" class="fa fa-remove w3-right w3-button w3-transparent w3-xxlarge"></i>-->                     <!-- ตัวกากะบาท -->
