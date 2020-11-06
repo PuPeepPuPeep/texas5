@@ -1,11 +1,16 @@
 <div class="w3-container w3-text-grey" id="jeans">
     <p>8 items</p>
-    
+  <!-- ช่องค้นหา -->
+  <h1>ค้นหารายการสินค้า</h1>
+  <form method="GET">
+    <input class="w3-input w3-border w3-round" type="text" name="search" placeholder="ช่องค้นหารายการสินค้า"> 
+    <p><button class="w3-button w3-block w3-black" style="margin-top: 5px;">ค้นหา</button></p>
+  </form>
   </div>
 
   <!-- Product grid มันเรียงเป็นแนวตั้ง-->
-  <h1>1</h1>
-  <div class="w3-row" id="product">
+  <div class="w3-row" style="margin-top: 12px;" id="product">
+
   <?php
     include("connect.php");
     $sql = "SELECT * FROM product";
