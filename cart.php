@@ -31,9 +31,9 @@ while($row = mysqli_fetch_assoc($result)){
 echo 'ราคารวม '.$sum.'<br>';
 
 ?>
-<a class="w3-button w3-blue" href="payment.php?sum=<?php echo $sum ?>">ภาษีกู</a>
+<a class="w3-button w3-blue" href="payment.php?sum=<?php echo $sum ?>">ชำระเงิน</a>
 <br>
-<a class="w3-button w3-red" href="index.php">รวย จะซื้อเพิ่ม</a>
+<a class="w3-button w3-red" href="index.php">ซื้อเพิ่ม</a>
 </div>
 </body>
 </html>

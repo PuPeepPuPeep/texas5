@@ -16,7 +16,7 @@ WHERE P_ID='".$P_ID."'";
 $excute = mysqli_query($conn, $updatesql);
 if($excute){
     echo '<script>
-        alert("กล้ามาก เก่งมาก ขอบใจ");
+        alert("บันทึกการเปลี่ยนแปลงเรียบร้อย");
         window.location.href = "index.php";
     </script>';
 }else{

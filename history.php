@@ -7,7 +7,7 @@ $insertsql = "INSERT INTO history(M_ID,O_ID) SELECT M_ID, O_ID FROM orders WHERE
 $excute = mysqli_query($conn, $insertsql);
 if($excute){
     echo '<script>
-        alert("ฮิคฮิ้ววววว");
+        alert("ชำระเงินสำเร็จ");
         window.location.href = "index.php";
     </script>';
 }else{
