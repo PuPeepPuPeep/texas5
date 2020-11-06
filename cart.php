@@ -18,16 +18,25 @@ $sum = 0;
 ?>
 <div class="w3-content w3-center">
     <h2 class="w3-wide">Cart</h2>
+    <table class="w3-table-all w3-centered">
+    <tr>
+        <th>ภาพสินค้า</th>
+        <th>ชื่อสินค้า</th>
+        <th>ราคา</th>
+    </tr>
 <?php
 while($row = mysqli_fetch_assoc($result)){
     $sql2 = "SELECT * FROM product WHERE P_ID='".$row['P_ID']."'";
     $result2 = mysqli_query($conn, $sql2);
     $row2 = mysqli_fetch_assoc($result2);
-    echo $row2['P_name'].'<br>' ;
-    echo $row2['P_price'].'<br>' ;
-    echo '<img src="'.$row2['P_img'].'" width="250" height="250"><br>';
+    echo '<tr><td><img src="img/'.$row2['P_img'].'" alt="'.$row2['P_img'].'" width="250" height="250"></td>';
+    echo '<td>'.$row2['P_name'].'</td>' ;
+    echo '<td>'.$row2['P_price'].'</td></tr>' ;
     $sum = $sum + $row2['P_price'];
 }
+?>
+    </table>
+<?php
 echo 'ราคารวม '.$sum.'<br>';
 
 ?>
