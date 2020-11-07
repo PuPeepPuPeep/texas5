@@ -147,7 +147,6 @@ if (isset($_GET['logout'])){
         <p><textarea name="address" rows="4" cols="50" class="w3-input w3-border" placeholder="Address" required></textarea></p>
         <button type="button" class="btn btn-danger" onclick="document.getElementById('newsletter').style.display='none'">ยกเลิก</button>
         <button type="submit" class="btn btn-success">ตกลง</button>
-        <!--<i onclick="document.getElementById('newsletter').style.display='none'" class="fa fa-remove w3-right w3-button w3-transparent w3-xxlarge"></i>-->                     <!-- ตัวกากะบาท -->
       </form>
     </div>
   </div>
@@ -165,7 +164,6 @@ if (isset($_GET['logout'])){
         <button type="button" class="btn btn-danger" onclick="document.getElementById('login').style.display='none'">ยกเลิก</button>
         <button type="submit" class="btn btn-success">ตกลง</button>
         <button type="button" class="btn btn-info" onclick="document.getElementById('adminlogin').style.display='block'">สำหรับ Admin</button>
-        <!--<i onclick="document.getElementById('newsletter').style.display='none'" class="fa fa-remove w3-right w3-button w3-transparent w3-xxlarge"></i>-->                     <!-- ตัวกากะบาท -->
       </form>
     </div>
   </div>
@@ -182,7 +180,6 @@ if (isset($_GET['logout'])){
         <p><input name="pass" class="w3-input w3-border" type="password" placeholder="Password" required></p>
         <button type="button" class="btn btn-danger" onclick="document.getElementById('adminlogin').style.display='none'">ยกเลิก</button>
         <button type="submit" class="btn btn-success">ตกลง</button>
-        <!--<i onclick="document.getElementById('newsletter').style.display='none'" class="fa fa-remove w3-right w3-button w3-transparent w3-xxlarge"></i>-->                     <!-- ตัวกากะบาท -->
       </form>
     </div>
   </div>
@@ -210,7 +207,6 @@ if (isset($_GET['logout'])){
         </select></p>
         <button type="button" class="btn btn-danger" onclick="document.getElementById('addproduct').style.display='none'">ยกเลิก</button>
         <button type="submit" class="btn btn-success">ตกลง</button>
-        <!--<i onclick="document.getElementById('newsletter').style.display='none'" class="fa fa-remove w3-right w3-button w3-transparent w3-xxlarge"></i>-->                     <!-- ตัวกากะบาท -->
       </form>
     </div>
   </div>
@@ -226,7 +222,6 @@ if (isset($_GET['logout'])){
         <a href="reportfeedback.php" class="w3-button w3-border">Feedback</a>
         <br>
         <button type="button" class="btn btn-danger" onclick="document.getElementById('report').style.display='none'">ยกเลิก</button>
-        <!--<i onclick="document.getElementById('newsletter').style.display='none'" class="fa fa-remove w3-right w3-button w3-transparent w3-xxlarge"></i>-->                     <!-- ตัวกากะบาท -->
       </form>
     </div>
   </div>

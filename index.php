@@ -27,7 +27,6 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 
 
 <body class="w3-panel" style="max-width:100%">
-<!-- <body class="w3-content" style="max-width:1200px"> -->
 <?php
     include 'sidebar_menu.php'
 ?>

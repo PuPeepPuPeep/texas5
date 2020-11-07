@@ -31,7 +31,6 @@ $row = mysqli_fetch_assoc($result);
         <p><input name="type" class="w3-input w3-border" type="text" value="<?php echo $row["T_ID"];?>" required></p>
         <button type="button" class="btn btn-danger" onclick="window.history.back();">ยกเลิก</button>
         <button type="submit" class="btn btn-success">ตกลง</button>
-        <!--<i onclick="document.getElementById('newsletter').style.display='none'" class="fa fa-remove w3-right w3-button w3-transparent w3-xxlarge"></i>-->                     <!-- ตัวกากะบาท -->
       </form>
     </div>
   </div>

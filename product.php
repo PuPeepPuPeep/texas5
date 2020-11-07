@@ -1,8 +1,3 @@
-<div class="w3-container w3-text-grey" id="jeans">
-    <p>8 items</p> <!-- มันคืออะไรครับ By Sun -->
-  
-  </div>
-
   <!-- Product grid มันเรียงเป็นแนวตั้ง-->
   <div class="w3-row" style="margin-top: 12px;" id="product">
 
@@ -38,16 +33,6 @@
 
           </div>
       <?php
-      // ไม่ใช้ echo ในกรณีที่จะมีเงื่อนไข
-    // echo '
-    //   <div class="w3-col l3 s6">
-    //     <div class="w3-container">
-    //     <div class="w3-display-container">
-    //       <img src="img/'.$row["P_img"].'" style="width:100%">
-    //       <span class="w3-tag w3-display-topleft">New</span>
-    //       <div class="w3-display-middle w3-display-hover">
-    //         <a href="buy.php?P_ID='.$row["P_ID"].'" class="w3-button w3-red" disabled>Buy now <i class="fa fa-shopping-cart"></i></a>
-    //       </div>';
           if(isset($_SESSION['admin'])){
             ?>
             <div class="w3-display-bottommiddle w3-display-hover">
