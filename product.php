@@ -44,7 +44,7 @@
             <?php
           }
         echo '</div>
-          <p>'.mb_strimwidth($row["P_name"], 0, 30, "...").'<br><b style="color:#03B6C1">'.number_format($row["P_price"]).'</b></p>
+          <p title="'.$row["P_name"].'">'.mb_strimwidth($row["P_name"], 0, 30, "...").'<br><b style="color:#03B6C1">'.number_format($row["P_price"]).'</b></p>
         </div>
       </div>';
     }
