@@ -38,13 +38,13 @@
             <div class="w3-display-bottommiddle w3-display-hover">
             
             <a href="edit.php?P_ID=<?php echo $row["P_ID"];?>" type="button" class="w3-button w3-yellow">Edit <i class="fa fa-wrench"></i></a>
-            <a href="delete.php?P_ID=<?php echo $row["P_ID"];?>" type="button" class="w3-button w3-red">Delete</a>
+            <a href="delete.php?P_ID=<?php echo $row["P_ID"];?>" type="button" class="w3-button w3-red">Delete <i class="fa fa-remove"></i></a>
 
             </div>
             <?php
           }
         echo '</div>
-          <p>'.mb_strimwidth($row["P_name"], 0, 50, "...").'<br><b style="color:#03B6C1">'.number_format($row["P_price"]).'</b></p>
+          <p>'.mb_strimwidth($row["P_name"], 0, 30, "...").'<br><b style="color:#03B6C1">'.number_format($row["P_price"]).'</b></p>
         </div>
       </div>';
     }
