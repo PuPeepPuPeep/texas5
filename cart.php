@@ -36,8 +36,8 @@ while($row = mysqli_fetch_assoc($result)){
 }
 ?>
     </table>
-<?php
-echo 'ราคารวม '.$sum.'<br>';
+<?php 
+echo 'ราคารวม '.number_format($sum).'<br>';
 
 ?>
 <a class="w3-button w3-blue" href="payment.php?sum=<?php echo $sum ?>">ชำระเงิน</a>

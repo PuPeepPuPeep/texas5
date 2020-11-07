@@ -10,7 +10,7 @@ if (isset($_GET['logout'])){
 <nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
   <div class="w3-container w3-display-container w3-padding-16">
     <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
-    <h3 class="w3-wide"><b>LOGO</b></h3>
+    <h3 class="w3-wide"><b>TEXAS 5</b></h3>
   </div>
 
 
@@ -20,32 +20,34 @@ if (isset($_GET['logout'])){
         
     ?>
     
-    <a href="index.php?logout='1'" class="w3-bar-item w3-button w3-pading">Logout</a>
+    <a href="index.php?logout='1'" class="w3-bar-item w3-button w3-pading">Logout</a><br>
     
     <?php 
       } else {
     ?>
   <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding" onclick="document.getElementById('login').style.display='block'">Login</a> <!-- login -->
-    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding" onclick="document.getElementById('newsletter').style.display='block'">Register</a> <!-- register -->
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding" onclick="document.getElementById('newsletter').style.display='block'">Register</a><br> <!-- register -->
     <?php
 
 
     }
     ?>
+    <a href="index.php" class="w3-bar-item w3-button">Home</a>
     <a href="?T=1#product" class="w3-bar-item w3-button">CPU</a>
     <a href="?T=2#product" class="w3-bar-item w3-button">Mainboard</a>
     <a href="?T=3#product" class="w3-bar-item w3-button">RAM</a>
     <a href="?T=4#product" class="w3-bar-item w3-button">HardDisk / SSD</a>
-    <a href="?T=5#product" class="w3-bar-item w3-button">Power Supply</a>
+    <a href="?T=5#product" class="w3-bar-item w3-button">Power Supply</a><br>
+    <a href="#footer" class="w3-bar-item w3-button">Contact</a> 
   </div>
-  <a href="#footer" class="w3-bar-item w3-button w3-padding">Contact</a> 
+  
 </nav>
 
 
 
 <!-- Top menu on small screens -->
 <header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
-  <div class="w3-bar-item w3-padding-24 w3-wide">LOGO</div>
+  <div class="w3-bar-item w3-padding-24 w3-wide">TEXAS 5</div>
   <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
 </header>
 
