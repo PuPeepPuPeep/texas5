@@ -70,7 +70,6 @@ if (isset($_GET['logout'])){
 
   <!-- Top header -->
   <header class="w3-container w3-xlarge">
-    <p class="w3-left">test</p>
     <p class="w3-right">
 
 
