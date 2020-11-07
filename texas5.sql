@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 06, 2020 at 03:55 PM
+-- Generation Time: Nov 07, 2020 at 02:36 PM
 -- Server version: 10.4.13-MariaDB
 -- PHP Version: 7.4.8
 
@@ -59,7 +59,8 @@ CREATE TABLE `feedback` (
 INSERT INTO `feedback` (`F_ID`, `F_Date`, `F_Text`, `M_ID`) VALUES
 (1, '2020-11-04', 'Test', 1),
 (2, '2020-11-04', 'บ่มีอิหยังมาพังทล๊ายยยยยยย', 1),
-(3, '2020-11-05', 'สวัส ดีคร้าบบ', 4);
+(3, '2020-11-05', 'สวัส ดีคร้าบบ', 4),
+(4, '2020-11-07', 'จัดมาดิ้\r\nเบิ้มๆน่ะ\r\nคือลือน่ะ', 4);
 
 -- --------------------------------------------------------
 
@@ -115,7 +116,15 @@ INSERT INTO `history` (`H_ID`, `H_Date`, `M_ID`, `O_ID`) VALUES
 (52, '2020-11-05 08:39:15', 1, 29),
 (53, '2020-11-05 08:39:15', 1, 30),
 (54, '2020-11-05 14:17:45', 4, 31),
-(55, '2020-11-05 14:17:45', 4, 32);
+(55, '2020-11-05 14:17:45', 4, 32),
+(56, '2020-11-06 16:20:55', 1, 33),
+(57, '2020-11-06 16:20:55', 1, 34),
+(58, '2020-11-06 16:20:55', 1, 35),
+(59, '2020-11-06 16:20:55', 1, 36),
+(63, '2020-11-06 16:24:57', 1, 37),
+(64, '2020-11-07 12:47:25', 1, 38),
+(65, '2020-11-07 12:51:21', 1, 39),
+(66, '2020-11-07 12:51:21', 1, 40);
 
 -- --------------------------------------------------------
 
@@ -190,7 +199,15 @@ INSERT INTO `orders` (`O_ID`, `P_ID`, `M_ID`, `O_status`) VALUES
 (29, 2, 1, 1),
 (30, 4, 1, 1),
 (31, 3, 4, 1),
-(32, 2, 4, 1);
+(32, 2, 4, 1),
+(33, 22, 1, 1),
+(34, 23, 1, 1),
+(35, 2, 1, 1),
+(36, 34, 1, 1),
+(37, 32, 1, 1),
+(38, 38, 1, 1),
+(39, 19, 1, 1),
+(40, 27, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -223,7 +240,11 @@ INSERT INTO `payment` (`Pay_ID`, `Pay_price`, `M_ID`) VALUES
 (12, 555, 1),
 (13, 15323, 1),
 (14, 7467, 1),
-(15, 6233, 4);
+(15, 6233, 4),
+(16, 27825, 1),
+(17, 19900, 1),
+(18, 4750, 1),
+(19, 16180, 1);
 
 -- --------------------------------------------------------
 
@@ -245,16 +266,6 @@ CREATE TABLE `product` (
 --
 
 INSERT INTO `product` (`P_ID`, `P_name`, `P_price`, `P_img`, `A_ID`, `T_ID`) VALUES
-(2, 'PNOOY', 555, 'PNOOY.jpg', 'admin', 'r1'),
-(3, 'PBEWWWW', 5678, 'PBEw.jpg', 'admin', '3'),
-(4, 'Test', 1234, 'PBEW.jpg', '', '2'),
-(11, 'HELP ME PLZ', 1111, 'PSUN.jpg', '', 'ram'),
-(12, 'Shit here we go again', 333, 'O.jpg', '', 'ram'),
-(14, 'O No', 1234, 'O.jpg', '', 'ram'),
-(15, 'OOO', 999, 'O.jpg', '', 'ram'),
-(16, 'One More Time', 9090, 'PSUN.jpg', 'admin', 'ram'),
-(17, 'Aha', 10, 'O.jpg', 'admin', 'ram'),
-(18, 'sss', 444, 'PSUN.jpg', 'admin', '1'),
 (19, 'CPU (ซีพียู) AMD AM4 RYZEN 5 5600X 3.7 GHz', 10590, 'cpu1.jpg', 'admin', '1'),
 (20, 'CPU (ซีพียู) INTEL 1200 CORE I9-10900KA (MARVEL AVENGER) 3.7 GHz', 18500, 'CPU2.jpg', 'admin', '1'),
 (21, 'CPU (ซีพียู) INTEL 1200 CORE I3-10100F 3.60 GHz', 2890, 'cpu3.jpg', 'admin', '1'),
@@ -373,13 +384,13 @@ ALTER TABLE `type`
 -- AUTO_INCREMENT for table `feedback`
 --
 ALTER TABLE `feedback`
-  MODIFY `F_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `F_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `history`
 --
 ALTER TABLE `history`
-  MODIFY `H_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
+  MODIFY `H_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
 
 --
 -- AUTO_INCREMENT for table `member`
@@ -391,19 +402,19 @@ ALTER TABLE `member`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `O_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `O_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 
 --
 -- AUTO_INCREMENT for table `payment`
 --
 ALTER TABLE `payment`
-  MODIFY `Pay_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `Pay_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `P_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
+  MODIFY `P_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
 
 --
 -- AUTO_INCREMENT for table `type`
