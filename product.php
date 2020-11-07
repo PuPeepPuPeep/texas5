@@ -23,11 +23,11 @@
             <?php 
               if(empty($_SESSION['name']) && empty($_SESSION['id'])) {
                 ?>
-                <a href="" onClick="alert('กรุณาเข้าสู่ระบบ')" class="w3-button w3-red">Buy now <i class="fa fa-shopping-cart"></i></a>
+                <a href="" onClick="alert('กรุณาเข้าสู่ระบบ')" class="w3-btn w3-round-large w3-red">Buy now <i class="fa fa-shopping-cart"></i></a>
     
                 <?php
               } else {
-                echo '<a href="buy.php?P_ID='.$row["P_ID"].'" class="w3-button w3-red">Buy now <i class="fa fa-shopping-cart"></i></a>';
+                echo '<a href="buy.php?P_ID='.$row["P_ID"].'" class="w3-btn w3-round-large w3-red">Buy now <i class="fa fa-shopping-cart"></i></a>';
               }
             ?>
 
@@ -37,8 +37,8 @@
             ?>
             <div class="w3-display-bottommiddle w3-display-hover">
             
-            <a href="edit.php?P_ID=<?php echo $row["P_ID"];?>" type="button" class="w3-button w3-yellow">Edit <i class="fa fa-wrench"></i></a>
-            <a href="delete.php?P_ID=<?php echo $row["P_ID"];?>" type="button" class="w3-button w3-red">Delete <i class="fa fa-remove"></i></a>
+            <a href="edit.php?P_ID=<?php echo $row["P_ID"];?>" type="button" class="w3-btn w3-round-large w3-yellow">Edit <i class="fa fa-wrench"></i></a>
+            <a href="delete.php?P_ID=<?php echo $row["P_ID"];?>" type="button" class="w3-btn w3-round-large w3-red">Delete <i class="fa fa-remove"></i></a>
 
             </div>
             <?php
