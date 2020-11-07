@@ -5,8 +5,17 @@
         <p>Feed(me)back? Go ahead.</p>
         <form action="feedback.php" method="POST">
           <p><textarea style="resize: none" class="w3-input w3-border" placeholder="Message here" name="message" cols="30" rows="10" required></textarea></p>
-          
-          <button type="submit" class="w3-button w3-block w3-dark-gray">Send</button>
+          <?php
+          if(empty($_SESSION['M_ID'])){
+          ?>
+            <button type="submit" class="w3-button w3-block w3-dark-gray" disabled>Send</button>
+          <?php
+          }else{
+          ?>
+            <button type="submit" class="w3-button w3-block w3-dark-gray">Send</button>
+          <?php
+          }
+          ?>
         </form>
       </div>
       <div class="w3-col s8">
