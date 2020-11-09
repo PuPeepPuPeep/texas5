@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <title>Document</title>
+  <title>Edit</title>
 </head>
 <body>
 <?php
@@ -29,12 +29,13 @@ $row = mysqli_fetch_assoc($result);
         <p><input name="image" class="w3-input w3-border" type="file" value="<?php echo $row["P_img"];?>"></p>
         <p>Type</p>
         <p><input name="type" class="w3-input w3-border" type="text" value="<?php echo $row["T_ID"];?>" required></p>
-        <button type="button" class="btn btn-danger" onclick="window.history.back();">ยกเลิก</button>
-        <button type="submit" class="btn btn-success">ตกลง</button>
-        <!--<i onclick="document.getElementById('newsletter').style.display='none'" class="fa fa-remove w3-right w3-button w3-transparent w3-xxlarge"></i>-->                     <!-- ตัวกากะบาท -->
+        <button type="button" class="w3-btn w3-round-large w3-red" onclick="window.history.back();">ยกเลิก</button>
+        <button type="submit" class="w3-btn w3-round-large w3-green">ตกลง</button>
       </form>
     </div>
   </div>
 </div>
 </body>
 </html>
+
+

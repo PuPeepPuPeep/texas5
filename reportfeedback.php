@@ -28,12 +28,19 @@ $mpdf = new \Mpdf\Mpdf([
 $sql = "SELECT * FROM feedback AS f, member AS m WHERE f.M_ID = m.M_ID";
 $result = mysqli_query($conn, $sql);
     
+    $content .= "<h1>Feedback Report</h1>";
+    $content .= "<table style=text-align:center;>
+        <tr><th>Feedback ID</th>
+        <th>Feedback Date</th>
+        <th>Message</th>
+        <th>Member Name</th></tr>";
 while($row=mysqli_fetch_assoc($result)){
-    $content .= "F_ID = ".$row["F_ID"];
-    $content .= "F_Date = ".$row["F_Date"];
-    $content .= "F_Text = ".$row["F_Text"];
-    $content .= "M_Name = ".$row["M_Name"]."<br>";
+    $content .= "<tr><td>".$row["F_ID"]."</td>";
+    $content .= "<td>".$row["F_Date"]."</td>";
+    $content .= "<td>".$row["F_Text"]."</td>";
+    $content .= "<td>".$row["M_Name"]."</td></tr>";
 }
+    $content .= "</table>";
 
 $mpdf->WriteHTML($content);
 $mpdf->Output();

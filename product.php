@@ -1,8 +1,3 @@
-<div class="w3-container w3-text-grey" id="jeans">
-    <p>8 items</p> <!-- มันคืออะไรครับ By Sun -->
-  
-  </div>
-
   <!-- Product grid มันเรียงเป็นแนวตั้ง-->
   <div class="w3-row" style="margin-top: 12px;" id="product">
 
@@ -28,37 +23,28 @@
             <?php 
               if(empty($_SESSION['name']) && empty($_SESSION['id'])) {
                 ?>
-                <a href="" onClick="alert('กรุณาเข้าสู่ระบบ')" class="w3-button w3-red">Buy now <i class="fa fa-shopping-cart"></i></a>
+                <a href="" onClick="alert('กรุณาเข้าสู่ระบบ')" class="w3-btn w3-round-large w3-red">Buy now <i class="fa fa-shopping-cart"></i></a>
     
                 <?php
               } else {
-                echo '<a href="buy.php?P_ID='.$row["P_ID"].'" class="w3-button w3-red">Buy now <i class="fa fa-shopping-cart"></i></a>';
+                echo '<a href="buy.php?P_ID='.$row["P_ID"].'" class="w3-btn w3-round-large w3-red">Buy now <i class="fa fa-shopping-cart"></i></a>';
               }
             ?>
 
           </div>
       <?php
-      // ไม่ใช้ echo ในกรณีที่จะมีเงื่อนไข
-    // echo '
-    //   <div class="w3-col l3 s6">
-    //     <div class="w3-container">
-    //     <div class="w3-display-container">
-    //       <img src="img/'.$row["P_img"].'" style="width:100%">
-    //       <span class="w3-tag w3-display-topleft">New</span>
-    //       <div class="w3-display-middle w3-display-hover">
-    //         <a href="buy.php?P_ID='.$row["P_ID"].'" class="w3-button w3-red" disabled>Buy now <i class="fa fa-shopping-cart"></i></a>
-    //       </div>';
           if(isset($_SESSION['admin'])){
             ?>
             <div class="w3-display-bottommiddle w3-display-hover">
             
-            <a href="edit.php?P_ID=<?php echo $row["P_ID"];?>" type="button" class="w3-button w3-yellow">Edit <i class="fa fa-wrench"></i></a>
-            
+            <a href="edit.php?P_ID=<?php echo $row["P_ID"];?>" type="button" class="w3-btn w3-round-large w3-yellow">Edit <i class="fa fa-wrench"></i></a>
+            <a href="delete.php?P_ID=<?php echo $row["P_ID"];?>" type="button" class="w3-btn w3-round-large w3-red">Delete <i class="fa fa-remove"></i></a>
+
             </div>
             <?php
           }
         echo '</div>
-          <p>'.mb_strimwidth($row["P_name"], 0, 50, "...").'<br><b>'.$row["P_price"].'</b></p>
+          <p title="'.$row["P_name"].'">'.mb_strimwidth($row["P_name"], 0, 30, "...").'<br><b style="color:#03B6C1">'.number_format($row["P_price"]).'</b></p>
         </div>
       </div>';
     }

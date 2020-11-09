@@ -1,10 +1,3 @@
- <!--<div class="w3-container w3-dark-gray w3-padding-32">
-    <h1>Subscribe</h1>
-    <p>To get special offers and VIP treatment:</p>
-    <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail" style="width:100%"></p>
-    <button type="button" class="w3-button w3-red w3-margin-bottom">Subscribe</button>
-  </div>-->
-
 <footer class="w3-padding-64 w3-light-grey w3-small w3-center" id="footer">
     <div class="w3-row-padding">
       <div class="w3-col s4">
@@ -12,8 +5,17 @@
         <p>Feed(me)back? Go ahead.</p>
         <form action="feedback.php" method="POST">
           <p><textarea style="resize: none" class="w3-input w3-border" placeholder="Message here" name="message" cols="30" rows="10" required></textarea></p>
-          
-          <button type="submit" class="w3-button w3-block w3-dark-gray">Send</button>
+          <?php
+          if(empty($_SESSION['M_ID'])){
+          ?>
+            <button type="submit" class="w3-button w3-block w3-dark-gray" disabled>Send</button>
+          <?php
+          }else{
+          ?>
+            <button type="submit" class="w3-button w3-block w3-dark-gray">Send</button>
+          <?php
+          }
+          ?>
         </form>
       </div>
       <div class="w3-col s8">

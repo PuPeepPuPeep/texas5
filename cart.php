@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <title>Document</title>
+    <title>Cart</title>
 </head>
 <body>
 <?php
@@ -23,6 +23,7 @@ $sum = 0;
         <th>ภาพสินค้า</th>
         <th>ชื่อสินค้า</th>
         <th>ราคา</th>
+        <th></th>
     </tr>
 <?php
 while($row = mysqli_fetch_assoc($result)){
@@ -31,18 +32,21 @@ while($row = mysqli_fetch_assoc($result)){
     $row2 = mysqli_fetch_assoc($result2);
     echo '<tr><td><img src="img/'.$row2['P_img'].'" alt="'.$row2['P_img'].'" width="250" height="250"></td>';
     echo '<td>'.$row2['P_name'].'</td>' ;
-    echo '<td>'.$row2['P_price'].'</td></tr>' ;
+    echo '<td>'.$row2['P_price'].'</td>';
+    echo '<td><a href="deletecart.php?O_ID='.$row['O_ID'].'" type="button" class="w3-btn w3-round-large w3-red">ยกเลิก</a></td></tr>' ;
     $sum = $sum + $row2['P_price'];
 }
 ?>
     </table>
-<?php
-echo 'ราคารวม '.$sum.'<br>';
+<?php 
+echo 'ราคารวม '.number_format($sum).'<br>';
 
 ?>
-<a class="w3-button w3-blue" href="payment.php?sum=<?php echo $sum ?>">ชำระเงิน</a>
-<br>
-<a class="w3-button w3-red" href="index.php">ซื้อเพิ่ม</a>
+<a class="w3-btn w3-round-large w3-green" href="payment.php?sum=<?php echo $sum ?>">ชำระเงิน</a>
+
+<a class="w3-btn w3-round-large w3-red" href="index.php">ซื้อเพิ่ม</a>
 </div>
 </body>
 </html>
+
+
