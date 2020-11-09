@@ -17,7 +17,6 @@
         <div class="w3-container">
         <div class="w3-display-container">
           <img src="img/<?= $row["P_img"]; ?>" width="250" height="250">
-          <span class="w3-tag w3-display-topleft">New</span>
           <div class="w3-display-middle w3-display-hover">
           
             <?php 
